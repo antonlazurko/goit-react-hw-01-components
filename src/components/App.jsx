@@ -8,8 +8,8 @@ import transactions from '../data/transactions.json';
 
 import Profile from './Profile';
 import Statistics from './Statistics';
-import StatisticsList from './StatisticsList';
 import FriendList from './FriendList';
+// import FriendListItem from './FriendListItem';
 import TransactionHistory from './TransactionHistory';
 
 export default function App() {
@@ -22,9 +22,7 @@ export default function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics title="Upload stats">
-        <StatisticsList stats={statisticalData} />
-      </Statistics>
+      <Statistics title="Upload stats" stats={statisticalData} />
       <FriendList friends={friends} />
       <TransactionHistory transactions={transactions} />
 

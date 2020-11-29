@@ -1,12 +1,27 @@
 import PropTypes from 'prop-types';
 import styles from './FriendList.module.css';
+import FriendListItem from '../FriendListItem';
 
-export default function FriendList() {
+export default function FriendList({ friends }) {
   return (
-    <li className="item">
-      <span className="status"></span>
-      <img className="avatar" src="" alt="" width="48" />
-      <p className="name"></p>
-    </li>
+    <ul className="friend-list">
+      {friends.map(({ isOnline, name, avatar, id }) => {
+        return (
+          <FriendListItem
+            isOnline={isOnline}
+            name={name}
+            avatar={avatar}
+            key={id}
+          />
+        );
+      })}
+    </ul>
   );
 }
+FriendListItem.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  ),
+};
