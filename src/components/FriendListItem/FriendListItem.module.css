@@ -1,8 +1,18 @@
 .item {
 }
 .online {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  border-radius: 50%;
 }
 .offline {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
 }
 .avatar {
 }
