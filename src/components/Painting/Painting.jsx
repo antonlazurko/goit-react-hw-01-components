@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import './Painting.css';
+
 export default function Painting(props) {
   const { url, title, author, price, quantity = 'unknown' } = props;
   return (

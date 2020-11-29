@@ -1,14 +1,38 @@
-import paintings from '../data.json';
-import PaintingList from './PaintingsList';
-import Section from './Section';
+// import paintings from '../data.json';
+// import PaintingList from './PaintingsList';
+// import Section from './Section';
+import user from '../data/user.json';
+import statisticalData from '../data/statistical-data.json';
+import friends from '../data/friends.json';
+import transactions from '../data/transactions.json';
+
+import Profile from './Profile';
+import Statistics from './Statistics';
+import StatisticsList from './StatisticsList';
+import FriendList from './FriendList';
+import TransactionHistory from './TransactionHistory';
+
 export default function App() {
   return (
     <div>
+      <Profile
+        name={user.name}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statistics title="Upload stats">
+        <StatisticsList stats={statisticalData} />
+      </Statistics>
+      <FriendList friends={friends} />
+      <TransactionHistory transactions={transactions} />
+
       {/* <PaintingList items={paintings} /> */}
-      <Section title="Top of the week">
+      {/* <Section title="Top of the week">
         <PaintingList items={paintings} />
       </Section>
-      <Section />
+      <Section /> */}
 
       {/* {paintings.map(painting =>
             <Painting
