@@ -5,6 +5,7 @@ import FriendListItem from '../FriendListItem';
 export default function FriendList({ friends }) {
   return (
     <ul className={styles.frienList}>
+      My friends
       {friends.map(({ isOnline, name, avatar, id }) => {
         return (
           <FriendListItem

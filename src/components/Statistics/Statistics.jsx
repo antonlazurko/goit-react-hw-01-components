@@ -25,3 +25,12 @@ Statistics.propTypes = {
     }),
   ),
 };
+function getRandomColor() {
+  let color = '';
+  for (var i = 0; i < 4; i += 1) {
+    const sub = Math.floor(Math.random() * 256).toString(16);
+    color += sub.length === 1 ? '0' + sub : sub;
+  }
+  return '#' + color;
+}
+console.log(getRandomColor());

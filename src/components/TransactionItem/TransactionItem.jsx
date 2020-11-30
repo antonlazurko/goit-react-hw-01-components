@@ -3,9 +3,9 @@ import styles from './TransactionItem.module.css';
 export default function TransactionItem({ type, amount, currency }) {
   return (
     <tr className={styles.tableRow}>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
+      <td className={styles.td}>{type}</td>
+      <td className={styles.td}>{amount}</td>
+      <td className={styles.td}>{currency}</td>
     </tr>
   );
 }

@@ -1,6 +1,16 @@
 .transactionHistory {
+  width: 100%;
+  border: 1px solid #aeb7c0;
+  padding: 0;
 }
 .thead {
+  background-color: #00bcd5;
+}
+.th {
+  color: #fff;
+  font-weight: 200;
+  font-size: medium;
 }
 .tbody {
+  text-align: center;
 }

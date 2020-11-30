@@ -1,2 +1,8 @@
 .tableRow {
 }
+.tableRow:nth-child(2n) {
+  background-color: #fff;
+}
+.td {
+  border: 1px solid #aeb7c0;
+}
